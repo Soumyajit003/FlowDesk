@@ -98,21 +98,7 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="mt-8 p-4 bg-blue-50 border border-blue-100 rounded-lg">
-          <p className="text-xs text-blue-800 font-medium mb-2 uppercase tracking-wider">Demo Accounts:</p>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <p className="text-[10px] text-blue-600 font-bold uppercase">Admin</p>
-              <p className="text-xs text-blue-900">admin@test.com</p>
-              <p className="text-xs text-blue-900">password123</p>
-            </div>
-            <div>
-              <p className="text-[10px] text-blue-600 font-bold uppercase">Member</p>
-              <p className="text-xs text-blue-900">member@test.com</p>
-              <p className="text-xs text-blue-900">password123</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
