@@ -11,5 +11,8 @@
     "start": "cd backend && node server.js"
   },
   "author": "Antigravity AI",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "20.x"
+  }
 }
