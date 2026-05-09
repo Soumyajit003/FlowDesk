@@ -35,10 +35,10 @@ const Dashboard = () => {
   if (loading) return <div className="flex items-center justify-center h-full">Loading...</div>;
 
   const statCards = [
-    { title: 'Total Tasks', value: stats.totalTasks, icon: CheckSquare, color: 'text-slate-600', bg: 'bg-slate-100' },
-    { title: 'Completed', value: stats.completedTasks, icon: CheckCircle2, color: 'text-green-600', bg: 'bg-green-100' },
-    { title: 'Pending', value: stats.pendingTasks, icon: Clock, color: 'text-blue-600', bg: 'bg-blue-100' },
-    { title: 'Overdue', value: stats.overdueTasks, icon: AlertCircle, color: 'text-red-600', bg: 'bg-red-100' },
+    { title: 'Total Tasks', value: stats?.totalTasks || 0, icon: CheckSquare, color: 'text-slate-600', bg: 'bg-slate-100' },
+    { title: 'Completed', value: stats?.completedTasks || 0, icon: CheckCircle2, color: 'text-green-600', bg: 'bg-green-100' },
+    { title: 'Pending', value: stats?.pendingTasks || 0, icon: Clock, color: 'text-blue-600', bg: 'bg-blue-100' },
+    { title: 'Overdue', value: stats?.overdueTasks || 0, icon: AlertCircle, color: 'text-red-600', bg: 'bg-red-100' },
   ];
 
   return (
@@ -83,7 +83,7 @@ const Dashboard = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  {stats.recentTasks.length > 0 ? stats.recentTasks.map((task) => (
+                  {stats?.recentTasks?.length > 0 ? stats.recentTasks.map((task) => (
                     <tr key={task._id} className="hover:bg-slate-50 transition-colors">
                       <td className="px-6 py-4">
                         <p className="text-sm font-medium text-slate-900">{task.title}</p>
@@ -119,7 +119,7 @@ const Dashboard = () => {
           />
           <CardContent className="p-6">
             <div className="space-y-4">
-              {stats.upcomingDeadlines.length > 0 ? stats.upcomingDeadlines.map((task) => (
+              {stats?.upcomingDeadlines?.length > 0 ? stats.upcomingDeadlines.map((task) => (
                 <div key={task._id} className="flex items-center justify-between p-3 rounded-lg border border-slate-100 hover:border-slate-200 transition-colors">
                   <div className="flex items-start gap-3">
                     <div className={task.priority === 'High' ? 'text-red-500 mt-1' : 'text-slate-400 mt-1'}>
