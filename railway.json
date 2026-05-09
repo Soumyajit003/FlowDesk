@@ -1,9 +1,9 @@
 {
-  "$schema": "https://railway.com/railway.schema.json",
+  "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "buildCommand": "npm install && cd backend && npm install && cd ../frontend && npm install --include=dev && npm run build"
+    "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "cd backend && npm start"
+    "startCommand": "npx serve -s dist -l $PORT"
   }
 }
