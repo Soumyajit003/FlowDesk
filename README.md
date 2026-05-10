@@ -4,8 +4,8 @@ A full-stack Team Task Manager web application that helps teams manage projects,
 
 ## Live Demo
 
-* Frontend: flowdesk-stayconnected.vercel.app
-* Backend API: flowdesk-production-99de.up.railway.app
+* Frontend: [](flowdesk-stayconnected.vercel.app)
+* Backend API: [](flowdesk-production-99de.up.railway.app)
 
 ---
 
